@@ -1,0 +1,118 @@
+<div class="home-wrap">
+
+  <!-- HERO STRIP -->
+  <section class="hero-strip">
+    <div class="hero-left">
+      <div class="kicker">
+        <i class="bi bi-shield-check"></i>
+        {{fullName}} · {{jobRole}}
+      </div>
+
+      <h1 class="title">
+        Building reliable web apps with
+        <span class="accent">Angular</span> & <span class="accent2">Django</span>.
+      </h1>
+
+      <p class="sub">
+        {{summary}}
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" routerLink="/projects">
+          <i class="bi bi-kanban"></i> View Projects
+        </a>
+
+        <a class="btn ghost" href="assets/Vijay_D_Resume.pdf" download>
+          <i class="bi bi-download"></i> Download Resume
+        </a>
+
+        <a class="btn ghost" routerLink="/contact">
+          <i class="bi bi-envelope"></i> Contact
+        </a>
+      </div>
+
+      <div class="meta">
+        <span class="meta-chip">
+          <i class="bi bi-geo-alt"></i> {{city}}
+        </span>
+        <span class="meta-chip">
+          <i class="bi bi-lightning-charge"></i> Open to Entry-Level Roles
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="mini-card">
+        <div class="mini-top">
+          <span class="mini-icon"><i class="bi bi-code-slash"></i></span>
+          <strong>Core Focus</strong>
+        </div>
+        <p>Frontend + API Integration + Database</p>
+      </div>
+
+      <div class="mini-card">
+        <div class="mini-top">
+          <span class="mini-icon"><i class="bi bi-diagram-3"></i></span>
+          <strong>Architecture</strong>
+        </div>
+        <p>MVT / MVC · REST APIs · CRUD</p>
+      </div>
+
+      <div class="mini-card">
+        <div class="mini-top">
+          <span class="mini-icon"><i class="bi bi-database"></i></span>
+          <strong>Databases</strong>
+        </div>
+        <p>PostgreSQL · MySQL</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-panel">
+    <div class="panel-head">
+      <h2 class="panel-title"><i class="bi bi-stars"></i> Skills</h2>
+      <span class="panel-note">Tech stack I work with</span>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill" *ngFor="let s of skills">
+        <span class="skill-ico">
+          <i class="bi" [ngClass]="s.icon" [style.color]="s.color"></i>
+        </span>
+        <div class="skill-txt">
+          <div class="skill-name">{{s.name}}</div>
+          <div class="skill-sub">Hands-on</div>
+        </div>
+        <i class="bi bi-check2-circle skill-ok"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <h2 class="panel-title"><i class="bi bi-award"></i> Highlights</h2>
+
+    <div class="hl-grid">
+      <div class="hl-card" *ngFor="let h of highlights">
+        <div class="hl-top">
+          <span class="hl-ico"><i class="bi bi-bookmark-star"></i></span>
+          <strong>{{h.title}}</strong>
+          <span class="hl-badge">{{h.badge}}</span>
+        </div>
+        <p>{{h.desc}}</p>
+      </div>
+    </div>
+  </section>
+<!-- Resume Download (Bottom) -->
+<section class="resume-strip">
+  <div class="resume-left">
+    <h3><i class="bi bi-file-earmark-text"></i> Resume</h3>
+    <p>Download my updated resume in PDF format.</p>
+  </div>
+
+  <a class="resume-btn" href="assets/Vijay_D_Resume.pdf" download>
+    <i class="bi bi-download"></i> Download Resume
+  </a>
+</section>
+</div>

@@ -1,0 +1,157 @@
+<section class="contact-head">
+  <div class="head-left">
+    <span class="head-ico"><i class="bi bi-envelope-paper-fill"></i></span>
+    <div>
+      <h1>Contact</h1>
+      <p>HR/Company can send message directly. You’ll receive it via Email / WhatsApp.</p>
+    </div>
+  </div>
+
+  <div class="head-badge">
+    <i class="bi bi-lightning-charge-fill"></i> Available for Internship / Entry-Level
+  </div>
+</section>
+
+<section class="contact-grid">
+  <!-- FORM -->
+  <div class="panel">
+    <div class="panel-title">
+      <i class="bi bi-chat-left-text-fill"></i>
+      <span>Message Form</span>
+    </div>
+
+    <form class="form" (ngSubmit)="submit()">
+      <div class="row2">
+        <div class="field">
+          <label>Name</label>
+          <div class="input-ico">
+            <i class="bi bi-person-fill"></i>
+            <input type="text" [(ngModel)]="form.name" name="name" placeholder="Company / HR name" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Email</label>
+          <div class="input-ico">
+            <i class="bi bi-envelope-fill"></i>
+            <input type="email" [(ngModel)]="form.email" name="email" placeholder="hr@company.com" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Subject</label>
+        <div class="input-ico">
+          <i class="bi bi-tag-fill"></i>
+          <input type="text" [(ngModel)]="form.subject" name="subject" placeholder="Interview / Internship / Project" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Message</label>
+        <div class="textarea-ico">
+          <i class="bi bi-pencil-fill"></i>
+          <textarea [(ngModel)]="form.message" name="message" placeholder="Type your message..." required></textarea>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-row">
+        <button class="btn primary" type="button" (click)="sendEmail()">
+          <i class="bi bi-send-fill"></i> Send to Email
+        </button>
+
+        <button class="btn whatsapp" type="button" (click)="sendWhatsApp()">
+          <i class="bi bi-whatsapp"></i> Send via WhatsApp
+        </button>
+      </div>
+
+     <p class="hint">
+  Your message will be delivered via Email or WhatsApp. I typically respond within 24 hours.
+</p>
+    </form>
+  </div>
+
+  <!-- INFO -->
+  <div class="side">
+    <div class="panel info">
+      <div class="panel-title">
+        <i class="bi bi-person-lines-fill"></i>
+        <span>Your Contact</span>
+      </div>
+
+      <!-- Email -->
+      <a class="info-item" [href]="'mailto:' + contactInfo.email">
+        <span class="info-ico"><i class="bi bi-envelope-fill"></i></span>
+        <div>
+          <div class="info-label">Email</div>
+          <div class="info-value">{{ contactInfo.email }}</div>
+        </div>
+        <i class="bi bi-box-arrow-up-right"></i>
+      </a>
+
+      <!-- WhatsApp -->
+      <a class="info-item" [href]="'https://wa.me/' + yourWhatsAppNumber" target="_blank">
+        <span class="info-ico"><i class="bi bi-whatsapp"></i></span>
+        <div>
+          <div class="info-label">WhatsApp</div>
+          <div class="info-value">+{{ yourWhatsAppNumber }}</div>
+        </div>
+        <i class="bi bi-box-arrow-up-right"></i>
+      </a>
+
+      <!-- Phone -->
+      <a class="info-item" [href]="'tel:' + contactInfo.phone">
+        <span class="info-ico"><i class="bi bi-telephone-fill"></i></span>
+        <div>
+          <div class="info-label">Phone</div>
+          <div class="info-value">{{ contactInfo.phone }}</div>
+        </div>
+        <i class="bi bi-box-arrow-up-right"></i>
+      </a>
+
+      <!-- Location -->
+      <!-- Location -->
+<a class="info-item" 
+   href="https://maps.app.goo.gl/AWcbk3bhqzkpZcxJ6" 
+   target="_blank">
+  <span class="info-ico"><i class="bi bi-geo-alt-fill"></i></span>
+  <div>
+    <div class="info-label">Location</div>
+    <div class="info-value">{{ contactInfo.location }}</div>
+  </div>
+  <i class="bi bi-box-arrow-up-right"></i>
+</a>
+
+      <!-- LinkedIn -->
+      <a class="info-item" [href]="contactInfo.linkedin" target="_blank">
+        <span class="info-ico"><i class="bi bi-linkedin"></i></span>
+        <div>
+          <div class="info-label">LinkedIn</div>
+          <div class="info-value">View Profile</div>
+        </div>
+        <i class="bi bi-box-arrow-up-right"></i>
+      </a>
+
+      <!-- GitHub -->
+      <a class="info-item" [href]="contactInfo.github" target="_blank">
+        <span class="info-ico"><i class="bi bi-github"></i></span>
+        <div>
+          <div class="info-label">GitHub</div>
+          <div class="info-value">View Repositories</div>
+        </div>
+        <i class="bi bi-box-arrow-up-right"></i>
+      </a>
+    </div>
+
+    <div class="panel mini">
+      <div class="panel-title">
+        <i class="bi bi-shield-check"></i>
+        <span>Professional Note</span>
+      </div>
+      <p class="muted">
+  Actively seeking opportunities in Python Full Stack Development.
+</p>
+    </div>
+  </div>
+</section>

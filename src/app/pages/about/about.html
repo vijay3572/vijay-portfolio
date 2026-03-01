@@ -1,0 +1,63 @@
+<!-- HERO SECTION -->
+<section class="about-hero">
+  <div>
+    <h1>{{ name }}</h1>
+    <h2>{{ role }}</h2>
+    <p>{{ summary }}</p>
+  </div>
+</section>
+
+<!-- 🔥 Internship Section -->
+<section class="internship-card">
+  <div class="intern-head">
+    <div>
+      <h3>{{ internship.role }}</h3>
+      <span class="company">
+        <i class="bi bi-building"></i> {{ internship.company }} · {{ internship.duration }}
+      </span>
+    </div>
+    <span class="badge">Current</span>
+  </div>
+
+  <ul>
+    <li *ngFor="let d of internship.description">
+      <i class="bi bi-check-circle-fill"></i>
+      <span>{{ d }}</span>
+    </li>
+  </ul>
+</section>
+
+<!-- TWO COLUMN SECTION -->
+<section class="about-grid">
+
+  <!-- LEFT : EDUCATION -->
+  <div class="panel">
+    <h3><i class="bi bi-mortarboard-fill"></i> Education</h3>
+
+    <div class="edu-card" *ngFor="let e of education">
+      <div class="edu-top">
+        <span class="degree">{{ e.degree }}</span>
+        <span class="time">{{ e.time }}</span>
+      </div>
+
+      <div class="college">
+        {{ e.college }}, {{ e.university }}
+      </div>
+
+      <div class="cgpa">{{ e.cgpa }}</div>
+
+      <p>{{ e.desc }}</p>
+    </div>
+  </div>
+
+  <!-- RIGHT : CERTIFICATIONS -->
+  <div class="panel">
+    <h3><i class="bi bi-patch-check-fill"></i> Certifications</h3>
+
+    <div class="cert" *ngFor="let c of certifications; let i = index" [class.highlight]="i === 0">
+      <i class="bi" [ngClass]="i === 0 ? 'bi-trophy-fill' : 'bi-check-circle-fill'"></i>
+      <span>{{ c }}</span>
+    </div>
+  </div>
+
+</section>

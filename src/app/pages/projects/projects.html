@@ -1,0 +1,103 @@
+<section class="projects-head">
+  <div class="head-left">
+    <div class="title-line">
+      <span class="icon-badge">
+        <i class="bi bi-kanban-fill"></i>
+      </span>
+      <div>
+        <h1>Projects</h1>
+        <p>Selected projects from my resume with tech stack and key contributions.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="head-right">
+    <div class="stat">
+      <div class="stat-top">
+        <i class="bi bi-check2-circle"></i> Completed
+      </div>
+      <div class="stat-num">
+        {{ projects.filter(p => p.status === 'Completed').length }}
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-top">
+        <i class="bi bi-hourglass-split"></i> In Progress
+      </div>
+      <div class="stat-num">
+        {{ projects.filter(p => p.status === 'In Progress').length }}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="projects-grid">
+  <article class="p-card" *ngFor="let p of projects">
+
+    <!-- Top Row -->
+    <div class="p-top">
+      <div class="p-title">
+        <span class="p-icon">
+          <i class="bi bi-rocket-takeoff-fill"></i>
+        </span>
+        <h2>{{ p.title }}</h2>
+      </div>
+
+      <span class="p-status" [class.done]="p.status === 'Completed'">
+        <i class="bi"
+           [ngClass]="p.status === 'Completed' ? 'bi-check-circle-fill' : 'bi-clock-fill'">
+        </i>
+        {{ p.status }}
+      </span>
+    </div>
+
+    <!-- Description -->
+    <p class="p-desc">{{ p.desc }}</p>
+
+    <!-- Stack -->
+    <div class="p-stack">
+      <i class="bi bi-layers"></i>
+      <span><b>Stack:</b> {{ p.stack }}</span>
+    </div>
+
+    <!-- Tags -->
+    <div class="p-tags">
+      <span class="tag" *ngFor="let t of p.tags">
+        <i class="bi bi-tag-fill"></i>
+        {{ t }}
+      </span>
+    </div>
+
+    <!-- Key Points -->
+    <div class="p-points">
+      <div class="point" *ngFor="let pt of p.points">
+        <i class="bi bi-check2"></i>
+        <span>{{ pt }}</span>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="p-actions">
+
+      <!-- GitHub Repo -->
+      <a class="btn github-btn"
+         *ngIf="p.github"
+         [href]="p.github"
+         target="_blank">
+        <i class="bi bi-github"></i> Repo
+      </a>
+
+      <!-- Live Demo -->
+      <a class="btn primary"
+         *ngIf="p.demo"
+         [href]="p.demo"
+         target="_blank">
+        <i class="bi bi-box-arrow-up-right"></i> Live Demo
+      </a>
+
+    </div>
+
+  </article>
+</section>

@@ -1,0 +1,246 @@
+:host{
+  display:block;
+  padding: 10px 0 30px;
+}
+
+.contact-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding: 18px;
+  background:#ffffff;
+  border:1px solid #e6ebf2;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(15,23,42,0.06);
+}
+
+.head-left{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+}
+
+.head-ico{
+  width:42px;
+  height:42px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  background:#eff6ff;
+  border:1px solid #dbeafe;
+  color:#1d4ed8;
+}
+
+.contact-head h1{
+  margin:0;
+  font-size: 22px;
+  font-weight: 800;
+  color:#0f172a;
+}
+.contact-head p{
+  margin:4px 0 0;
+  color:#64748b;
+  line-height: 1.6;
+}
+
+.head-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background:#ecfdf5;
+  border:1px solid #bbf7d0;
+  color:#166534;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+/* layout */
+.contact-grid{
+  margin-top: 16px;
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:16px;
+}
+
+@media (max-width: 980px){
+  .contact-grid{ grid-template-columns: 1fr; }
+}
+
+.panel{
+  background:#ffffff;
+  border:1px solid #e6ebf2;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 14px 34px rgba(15,23,42,0.06);
+}
+
+.panel-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight: 900;
+  color:#0f172a;
+  margin-bottom: 14px;
+}
+.panel-title i{
+  color:#2563eb;
+}
+
+/* form */
+.form{ display:grid; gap:12px; }
+.row2{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+}
+@media (max-width: 680px){
+  .row2{ grid-template-columns: 1fr; }
+}
+
+.field label{
+  display:block;
+  font-size: 12px;
+  font-weight: 800;
+  color:#64748b;
+  margin-bottom: 6px;
+}
+
+.input-ico, .textarea-ico{
+  position:relative;
+}
+
+.input-ico i, .textarea-ico i{
+  position:absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color:#64748b;
+}
+
+.textarea-ico i{
+  top: 16px;
+  transform:none;
+}
+
+input, textarea{
+  width:100%;
+  border:1px solid #e6ebf2;
+  border-radius: 14px;
+  background:#f8fafc;
+  padding: 11px 12px 11px 40px;
+  outline:none;
+  color:#0f172a;
+}
+
+textarea{
+  min-height: 130px;
+  resize: vertical;
+  padding-top: 12px;
+}
+
+input:focus, textarea:focus{
+  border-color: rgba(37,99,235,0.35);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+  background:#ffffff;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  height:42px;
+  padding:0 14px;
+  border-radius: 14px;
+  border:1px solid #e6ebf2;
+  background:#ffffff;
+  color:#0f172a;
+  font-weight: 900;
+  cursor:pointer;
+  transition:.18s;
+}
+.btn:hover{ transform: translateY(-1px); box-shadow: 0 10px 18px rgba(15,23,42,0.08); }
+.btn.primary{
+  background:#2563eb;
+  border-color:#2563eb;
+  color:#ffffff;
+}
+.btn.primary:hover{ filter: brightness(.98); }
+
+/* right info list */
+.side{ display:grid; gap:16px; }
+
+.info{ padding-bottom: 6px; }
+
+.info-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding: 12px;
+  border-radius: 16px;
+  border:1px solid #e6ebf2;
+  background:#f8fafc;
+  margin-bottom: 10px;
+  color:#0f172a;
+  transition:.18s;
+}
+.info-item:hover{
+  background:#ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(15,23,42,0.08);
+  border-color: rgba(37,99,235,0.18);
+}
+.info-item.no-link{ cursor: default; }
+.info-item.no-link:hover{ transform:none; box-shadow:none; }
+
+.info-ico{
+  width:38px;
+  height:38px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  background:#ffffff;
+  border:1px solid #e6ebf2;
+  color:#2563eb;
+}
+
+.info-label{
+  font-size: 12px;
+  font-weight: 800;
+  color:#64748b;
+}
+.info-value{
+  font-weight: 900;
+  color:#0f172a;
+}
+
+.muted{
+  margin:0;
+  color:#475569;
+  line-height: 1.7;
+}
+
+
+.btn-row{
+  display:flex;
+  gap:12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.btn.whatsapp{
+  background:#16a34a;
+  border-color:#16a34a;
+  color:#ffffff;
+}
+.btn.whatsapp:hover{ filter: brightness(.98); }
+
+.hint{
+  margin: 10px 0 0;
+  color:#64748b;
+  font-size: 12px;
+  font-weight: 600;
+}
