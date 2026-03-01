@@ -26,8 +26,8 @@ export class ProjectsComponent {
       desc: 'Web-based accident reporting and monitoring system with location search and structured database storage.',
       stack: 'Python • Django • HTML • CSS • JavaScript • Bootstrap • PostgreSQL',
       status: 'Completed',
-      github: 'https://github.com/vijay3572/smart-accident-system',
-      demo: 'https://smart-accident-demo.netlify.app',
+      github: 'https://github.com/vijay3572/Smart_accident_forcasting_system',
+      demo: 'https://smart-accident-forcasting-system.onrender.com',
       tags: ['Authentication', 'Location Search', 'Media Upload', 'Database'],
       points: [
         'Built signup/login with dashboard navigation.',
@@ -58,8 +58,8 @@ export class ProjectsComponent {
       desc: 'Modern Angular portfolio with routing, responsive layout, resume download and clean UI design.',
       stack: 'Angular • TypeScript • CSS',
       status: 'Completed',
-      github: 'https://github.com/vijay3572/vijay_portfolio',
-      demo: 'https://vijay-portfolio.netlify.app',
+      github: 'https://github.com/vijay3572/vijay-portfolio',
+      demo: 'https://vijay-portfolio-virid.vercel.app/',
       tags: ['Angular', 'TypeScript', 'Responsive UI'],
       points: [
         'Implemented standalone Angular components.',

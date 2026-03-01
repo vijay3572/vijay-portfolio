@@ -66,9 +66,24 @@
         </button>
       </div>
 
-     <p class="hint">
-  Your message will be delivered via Email or WhatsApp. I typically respond within 24 hours.
-</p>
+      <!-- ✅ Social icons under buttons -->
+      <div class="social-strip">
+        <a class="social-btn" [href]="contactInfo.linkedin" target="_blank" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+
+        <a class="social-btn ig" [href]="contactInfo.instagram" target="_blank" title="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+
+        <a class="social-btn gh" [href]="contactInfo.github" target="_blank" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
+
+      <p class="hint">
+        Your message will be delivered via Email or WhatsApp. I typically respond within 24 hours.
+      </p>
     </form>
   </div>
 
@@ -110,28 +125,19 @@
         <i class="bi bi-box-arrow-up-right"></i>
       </a>
 
-      <!-- Location -->
-      <!-- Location -->
-<a class="info-item" 
-   href="https://maps.app.goo.gl/AWcbk3bhqzkpZcxJ6" 
-   target="_blank">
-  <span class="info-ico"><i class="bi bi-geo-alt-fill"></i></span>
-  <div>
-    <div class="info-label">Location</div>
-    <div class="info-value">{{ contactInfo.location }}</div>
-  </div>
-  <i class="bi bi-box-arrow-up-right"></i>
-</a>
-
-      <!-- LinkedIn -->
-      <a class="info-item" [href]="contactInfo.linkedin" target="_blank">
-        <span class="info-ico"><i class="bi bi-linkedin"></i></span>
+      <!-- Location (Google Maps) -->
+      <a class="info-item"
+         href="https://maps.app.goo.gl/AWcbk3bhqzkpZcxJ6"
+         target="_blank">
+        <span class="info-ico"><i class="bi bi-geo-alt-fill"></i></span>
         <div>
-          <div class="info-label">LinkedIn</div>
-          <div class="info-value">View Profile</div>
+          <div class="info-label">Location</div>
+          <div class="info-value">{{ contactInfo.location }}</div>
         </div>
         <i class="bi bi-box-arrow-up-right"></i>
       </a>
+
+      <!-- ✅ Removed LinkedIn card from right side -->
 
       <!-- GitHub -->
       <a class="info-item" [href]="contactInfo.github" target="_blank">
@@ -150,8 +156,8 @@
         <span>Professional Note</span>
       </div>
       <p class="muted">
-  Actively seeking opportunities in Python Full Stack Development.
-</p>
+        Actively seeking opportunities in Python Full Stack Development.
+      </p>
     </div>
   </div>
 </section>

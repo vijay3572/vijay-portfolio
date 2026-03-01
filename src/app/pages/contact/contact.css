@@ -244,3 +244,51 @@ input:focus, textarea:focus{
   font-size: 12px;
   font-weight: 600;
 }
+
+
+
+/* Social icons under send buttons */
+/* Social icons centered */
+.social-strip{
+  display:flex;
+  justify-content:center;   /* ✅ center horizontally */
+  align-items:center;
+  gap:16px;
+  margin-top: 16px;
+}
+
+.social-btn{
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  border:1px solid #e6ebf2;
+  background:#ffffff;
+  color:#0f172a;
+  transition:.18s;
+  box-shadow: 0 10px 22px rgba(15,23,42,0.06);
+  text-decoration:none;
+}
+
+.social-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(15,23,42,0.10);
+  border-color: rgba(37,99,235,0.22);
+  color:#2563eb;
+}
+
+.social-btn i{
+  font-size: 18px;
+}
+
+.social-btn.ig:hover{
+  color:#e11d48;
+  border-color: rgba(225,29,72,0.22);
+}
+
+.social-btn.gh:hover{
+  color:#111827;
+  border-color: rgba(17,24,39,0.22);
+}
+

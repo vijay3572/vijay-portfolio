@@ -11,7 +11,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class ContactComponent {
 
-  // Form model
+  // ==============================
+  // Form Model
+  // ==============================
   form = {
     name: '',
     email: '',
@@ -19,18 +21,27 @@ export class ContactComponent {
     message: ''
   };
 
-  // Your contact details (edit links)
+  // ==============================
+  // Your Contact Details
+  // ==============================
   contactInfo = {
     email: 'vijaydofficial0@gmail.com',
     phone: '6381574367',
     location: 'Chennai, Tamil Nadu, India',
-    linkedin: 'https://www.linkedin.com/in/your-profile',
-    github: 'https://github.com/vijay3572'
+
+    // 🔗 Social Links
+    linkedin: 'https://www.linkedin.com/in/d-vijay-bb7801307?utm_source=share_via&utm_content=profile&utm_medium=member_android',  // update your real link
+    github: 'https://github.com/vijay3572',
+    instagram: 'https://instagram.com/mr.vijay_official_0'       // 🔥 add your Instagram username
   };
 
-  // WhatsApp number: CountryCode + Number (India 91)
+  // WhatsApp number (CountryCode + Number)
   yourWhatsAppNumber = '916381574367';
 
+
+  // ==============================
+  // Build Message Text
+  // ==============================
   private buildText(): string {
     return (
       `Name: ${this.form.name}\n` +
@@ -40,22 +51,38 @@ export class ContactComponent {
     );
   }
 
-  // Open email app with prefilled content
+
+  // ==============================
+  // Send Email
+  // ==============================
   sendEmail() {
     const subject = encodeURIComponent(this.form.subject || 'Portfolio Contact');
     const body = encodeURIComponent(this.buildText());
-    window.location.href = `mailto:${this.contactInfo.email}?subject=${subject}&body=${body}`;
+
+    window.location.href =
+      `mailto:${this.contactInfo.email}?subject=${subject}&body=${body}`;
   }
 
-  // Open WhatsApp with prefilled message
+
+  // ==============================
+  // Send WhatsApp
+  // ==============================
   sendWhatsApp() {
     const text = encodeURIComponent(this.buildText());
-    window.open(`https://wa.me/${this.yourWhatsAppNumber}?text=${text}`, '_blank');
+
+    window.open(
+      `https://wa.me/${this.yourWhatsAppNumber}?text=${text}`,
+      '_blank'
+    );
   }
 
-  // Keep this to prevent ngSubmit error
+
+  // ==============================
+  // Default Submit Action
+  // ==============================
   submit() {
-    // optional: default action if user presses Enter
+    // If user presses Enter
     this.sendEmail();
   }
+
 }
