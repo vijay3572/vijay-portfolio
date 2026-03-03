@@ -2,10 +2,17 @@
 
   <!-- HERO STRIP -->
   <section class="hero-strip">
+
     <div class="hero-left">
+
+      <div class="hello">
+        <i class="bi bi-person-circle"></i>
+        <span>Hello, I'm <b>{{ fullName }}</b></span>
+      </div>
+
       <div class="kicker">
         <i class="bi bi-shield-check"></i>
-        {{fullName}} · {{jobRole}}
+        {{ jobRole }}
       </div>
 
       <h1 class="title">
@@ -13,16 +20,15 @@
         <span class="accent">Angular</span> & <span class="accent2">Django</span>.
       </h1>
 
-      <p class="sub">
-        {{summary}}
-      </p>
+      <p class="sub">{{ summary }}</p>
 
       <div class="cta">
         <a class="btn primary" routerLink="/projects">
           <i class="bi bi-kanban"></i> View Projects
         </a>
 
-        <a class="btn ghost" href="assets/Vijay_D_Resume.pdf" download>
+        <!-- ✅ Resume path fixed -->
+        <a class="btn ghost" href="assets/VIJAY_D_fullstack_developer.pdf" download>
           <i class="bi bi-download"></i> Download Resume
         </a>
 
@@ -33,7 +39,7 @@
 
       <div class="meta">
         <span class="meta-chip">
-          <i class="bi bi-geo-alt"></i> {{city}}
+          <i class="bi bi-geo-alt"></i> {{ city }}
         </span>
         <span class="meta-chip">
           <i class="bi bi-lightning-charge"></i> Open to Entry-Level Roles
@@ -41,7 +47,9 @@
       </div>
     </div>
 
+    <!-- RIGHT -->
     <div class="hero-right">
+
       <div class="mini-card">
         <div class="mini-top">
           <span class="mini-icon"><i class="bi bi-code-slash"></i></span>
@@ -65,7 +73,9 @@
         </div>
         <p>PostgreSQL · MySQL</p>
       </div>
+
     </div>
+
   </section>
 
   <!-- SKILLS -->
@@ -77,14 +87,11 @@
 
     <div class="skills-grid">
       <div class="skill" *ngFor="let s of skills">
-        <span class="skill-ico">
+        <div class="skill-ico">
           <i class="bi" [ngClass]="s.icon" [style.color]="s.color"></i>
-        </span>
-        <div class="skill-txt">
-          <div class="skill-name">{{s.name}}</div>
-          <div class="skill-sub">Hands-on</div>
         </div>
-        <i class="bi bi-check2-circle skill-ok"></i>
+        <div class="skill-name">{{ s.name }}</div>
+        <div class="skill-sub">Hands-on</div>
       </div>
     </div>
   </section>
@@ -97,22 +104,25 @@
       <div class="hl-card" *ngFor="let h of highlights">
         <div class="hl-top">
           <span class="hl-ico"><i class="bi bi-bookmark-star"></i></span>
-          <strong>{{h.title}}</strong>
-          <span class="hl-badge">{{h.badge}}</span>
+          <strong>{{ h.title }}</strong>
+          <span class="hl-badge">{{ h.badge }}</span>
         </div>
-        <p>{{h.desc}}</p>
+        <p>{{ h.desc }}</p>
       </div>
     </div>
   </section>
-<!-- Resume Download (Bottom) -->
-<section class="resume-strip">
-  <div class="resume-left">
-    <h3><i class="bi bi-file-earmark-text"></i> Resume</h3>
-    <p>Download my updated resume in PDF format.</p>
-  </div>
 
-  <a class="resume-btn" href="assets/VIJAY_D_fullstack_developer.pdf" download>
-    <i class="bi bi-download"></i> Download Resume
-  </a>
-</section>
+  <!-- Resume Download (Bottom) -->
+  <section class="resume-strip">
+    <div class="resume-left">
+      <h3><i class="bi bi-file-earmark-text"></i> Resume</h3>
+      <p>Download my updated resume in PDF format.</p>
+    </div>
+
+    <!-- ✅ Resume path fixed -->
+    <a class="resume-btn" href="assets/VIJAY_D_fullstack_developer.pdf" download>
+      <i class="bi bi-download"></i> Download Resume
+    </a>
+  </section>
+
 </div>
